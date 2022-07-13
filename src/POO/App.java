@@ -42,7 +42,7 @@ public class App {
 
         }
         for (int i = 0; i < numeroEmpleado; i++) {
-            // System.out.println("Nombre del cliente :" + cliente[i]);
+            // System.out.println("Nombre del cliente :" + cliente[i]);...
             System.out.println(empleado.toString());
         }
 
