@@ -7,7 +7,7 @@ public class App {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Cuantos clientes desea ingresar al sistema : ");
+        System.out.println("Cuantos clientes desea ingresar al sistema...: ");
         int nC = sc.nextInt();
         sc.nextLine();// Limpiando consola
         Cliente[] cliente = new Cliente[nC];
