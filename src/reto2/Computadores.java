@@ -2,26 +2,26 @@ package reto2;
 
 public class Computadores {
     // variables base
-    final static char CONSUMO_W = 'F';
-    final static double PRECIO_BASE = 100.0;
-    final static Integer PESO_BASE = 5;
+    protected final static char CONSUMO_W = 'F';
+    protected final static double PRECIO_BASE = 100.0;
+    protected final static Integer PESO_BASE = 5;
     // Variables
-    Integer peso;
-    protected char consumow;
+    protected Integer peso;
+    protected char consumoW;
     protected double precioBase;
 
     // Contructores public Computadores ()
     // Constructor
     public Computadores() {
         this.peso = PESO_BASE;
-        this.consumow = CONSUMO_W;
+        this.consumoW = CONSUMO_W;
         this.precioBase = PRECIO_BASE;
 
     }
 
-    public void Computadoras(Double precioBase, Integer peso) {
+    public Computadores(Double precioBase, Integer peso) {
         this.precioBase = precioBase;
-        this.consumow = CONSUMO_W;
+        this.consumoW = CONSUMO_W;
         this.peso = peso;
 
     }
@@ -29,14 +29,14 @@ public class Computadores {
     public Computadores(Double precioBase, Integer peso, char consumow) {
         this.precioBase = precioBase;
         this.peso = peso;
-        this.consumow = consumow;
+        this.consumoW = consumow;
     }
 
     // metodos
     public Double CalcularPrecio() {
         Double adicion = 0.0;
         // codigo consumo
-        switch (consumow) {
+        switch (consumoW) {
             case 'A':
                 adicion += 100.0;
                 break;
@@ -74,7 +74,7 @@ public class Computadores {
     }
 
     public char getConsumoW() {
-        return consumow;
+        return consumoW;
     }
 
     public double getPrecioBase() {
