@@ -8,7 +8,7 @@ public class genericos {
         var mapa = new App<Integer, String>();
         mapa.setV("Cristian Galeano");
         mapa.setK(1);
-
+        boolean continuar = true;
         try {
             System.out.println("el señor " + mapa.getV() + "  perdio solo " + mapa.getK() + " materia ");
 
@@ -18,4 +18,4 @@ public class genericos {
 
     }
 
-}
+}// End Main
