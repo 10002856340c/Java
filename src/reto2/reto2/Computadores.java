@@ -1,41 +1,39 @@
 package reto2;
 
 public class Computadores {
-    // variables base
+
+    // Variables base
     protected final static char CONSUMO_W = 'F';
-    protected final static double PRECIO_BASE = 100.0;
     protected final static Integer PESO_BASE = 5;
-    // Variables
+    protected final static Double PRECIO_BASE = 100.0;
+    // variables
     protected Integer peso;
     protected char consumoW;
-    protected double precioBase;
+    protected Double precioBase;
 
-    // Contructores public Computadores ()
-    // Constructor
+    // constructores
     public Computadores() {
         this.peso = PESO_BASE;
         this.consumoW = CONSUMO_W;
         this.precioBase = PRECIO_BASE;
-
     }
 
     public Computadores(Double precioBase, Integer peso) {
         this.precioBase = precioBase;
-        this.consumoW = CONSUMO_W;
         this.peso = peso;
+        this.consumoW = CONSUMO_W;
 
     }
 
-    public Computadores(Double precioBase, Integer peso, char consumow) {
+    public Computadores(Double precioBase, Integer peso, char consumoW) {
         this.precioBase = precioBase;
         this.peso = peso;
-        this.consumoW = consumow;
+        this.consumoW = consumoW;
     }
 
     // metodos
     public Double CalcularPrecio() {
         Double adicion = 0.0;
-        // codigo consumo
         switch (consumoW) {
             case 'A':
                 adicion += 100.0;
@@ -48,6 +46,7 @@ public class Computadores {
                 break;
             case 'D':
                 adicion += 50.0;
+                break;
             case 'E':
                 adicion += 30.0;
                 break;
@@ -64,12 +63,12 @@ public class Computadores {
         } else if (peso >= 80) {
             adicion += 100.0;
         }
-        return precioBase + adicion;
-
+        // a
+        System.out.println("adicion portatil : " + adicion);
+        return this.precioBase + adicion;
     }
 
-    // getters
-    public int getPeso() {
+    public Integer getPeso() {
         return peso;
     }
 
@@ -77,8 +76,8 @@ public class Computadores {
         return consumoW;
     }
 
-    public double getPrecioBase() {
+    public Double getPrecioBase() {
         return precioBase;
-
     }
+
 }
